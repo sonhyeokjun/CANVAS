@@ -184,6 +184,43 @@ ctx.arc(220 + 10, 80, 8, Math.PI, 2 * Math.PI);
 ctx.fill();
 
 
+
+
+
+
+
+그리기랑 채우기 버튼을 만들어준다.
+버튼을 클릭하면 onModeClick이라는 함수가 실행된다.
+isFilling이라는 변수를 false로 설정해주고
+onModeClick함수는
+isFilling이 true일떄 false로 바꿔주고
+버튼의 텍스트를 fill로바꿔준다
+
+canvas 클릭이라는 이벤트를 만들어주고 함수를 실행
+isFilling이 true일떄 사각형을 만들어준다.
+
+
+
+
+function onDestroyClick() {
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+}
+
+function onEraserClick() {
+ctx.strokeStyle = "white";
+isFilling = false;
+modeBtn.innerText = "Fill";
+}
+
+
+
+
+css로 만들고싶은것들 만들기
+
+- 유저가 폰트 모양과 크기 선택
+- 선 말고 모양으로 그리고 색 채우게 하기
+
 사람 웃는 얼굴 만들기
 
 
